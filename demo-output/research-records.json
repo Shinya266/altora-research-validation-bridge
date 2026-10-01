@@ -1,7 +1,7 @@
 {
   "signal": {
     "signalId": "signal_e0b42515b7c01b58",
-    "createdAt": "2026-10-01T05:46:27.217Z",
+    "createdAt": "2026-10-01T05:55:00.275Z",
     "datasetId": "local-temporal-observations-v1",
     "feature": "signal_feature",
     "target": "target",
@@ -31,7 +31,7 @@
   ],
   "specialistPasses": [
     {
-      "passId": "pass_525071c5-f3d8-4ff7-9631-7ac09caee449",
+      "passId": "pass_d3e4b72f-2f1b-4f15-bd24-d820ee7a9133",
       "signalId": "signal_e0b42515b7c01b58",
       "role": "DOMAIN_SPECIALIST",
       "observation": "Association=1.000",
@@ -52,10 +52,10 @@
       "missingEvidence": [
         "Domain intervention"
       ],
-      "createdAt": "2026-10-01T05:46:27.218Z"
+      "createdAt": "2026-10-01T05:55:00.276Z"
     },
     {
-      "passId": "pass_2465f0cb-7028-47c6-bc2e-152666be2b43",
+      "passId": "pass_36ea5ce8-5ec2-434d-82e4-307c1b31d966",
       "signalId": "signal_e0b42515b7c01b58",
       "role": "STATISTICIAN",
       "observation": "T0 correlation=1.000",
@@ -76,10 +76,10 @@
       "missingEvidence": [
         "Independent replication"
       ],
-      "createdAt": "2026-10-01T05:46:27.218Z"
+      "createdAt": "2026-10-01T05:55:00.276Z"
     },
     {
-      "passId": "pass_c498aaf3-8f19-4ff4-aa44-3233f33c2b9d",
+      "passId": "pass_f3dab2c7-a139-459e-bf8a-fc7c5f66f544",
       "signalId": "signal_64f6db6d23021a05",
       "role": "DOMAIN_SPECIALIST",
       "observation": "Association=0.094",
@@ -100,10 +100,10 @@
       "missingEvidence": [
         "Domain intervention"
       ],
-      "createdAt": "2026-10-01T05:46:27.218Z"
+      "createdAt": "2026-10-01T05:55:00.276Z"
     },
     {
-      "passId": "pass_2c918dea-e49d-4aa8-a37d-5f061b4abe7d",
+      "passId": "pass_c7736158-564e-4bd7-8b9c-063f94d60808",
       "signalId": "signal_64f6db6d23021a05",
       "role": "STATISTICIAN",
       "observation": "T0 correlation=0.094",
@@ -124,7 +124,7 @@
       "missingEvidence": [
         "Independent replication"
       ],
-      "createdAt": "2026-10-01T05:46:27.218Z"
+      "createdAt": "2026-10-01T05:55:00.276Z"
     }
   ],
   "hypotheses": [
@@ -173,7 +173,7 @@
         "datasetDomain": "local-temporal"
       },
       "confidenceAtT0": 0.55,
-      "createdAt": "2026-10-01T05:46:27.218Z"
+      "createdAt": "2026-10-01T05:55:00.276Z"
     },
     {
       "hypothesisId": "hyp_41b971ba1b6eb9c2",
@@ -218,7 +218,7 @@
         "datasetDomain": "local-temporal"
       },
       "confidenceAtT0": 0.2,
-      "createdAt": "2026-10-01T05:46:27.218Z"
+      "createdAt": "2026-10-01T05:55:00.276Z"
     },
     {
       "hypothesisId": "hyp_81aa6b69fbeb3dd4",
@@ -263,14 +263,14 @@
         "datasetDomain": "local-temporal"
       },
       "confidenceAtT0": 0.25,
-      "createdAt": "2026-10-01T05:46:27.218Z"
+      "createdAt": "2026-10-01T05:55:00.276Z"
     }
   ],
   "freezes": [
     {
-      "freezeId": "freeze_162b83c9-9524-4f26-b80c-85f019ed3958",
+      "freezeId": "freeze_d5d57906-b9c1-4f80-8755-0e5c79c0dda6",
       "hypothesisId": "hyp_f028e909004dd6c1",
-      "frozenAt": "2026-10-01T05:46:27.218Z",
+      "frozenAt": "2026-10-01T05:55:00.276Z",
       "signalId": "signal_e0b42515b7c01b58",
       "evidenceAvailableAtT0": [
         {
@@ -321,9 +321,9 @@
       "contentHash": "9008327daec511f9bc503b0bce046d663bd39bdcaf24c552895d1a0c0e58f78a"
     },
     {
-      "freezeId": "freeze_d1683a09-308b-444e-a89f-865db8672dd9",
+      "freezeId": "freeze_29c548c5-043e-409d-b69b-49438094fd50",
       "hypothesisId": "hyp_41b971ba1b6eb9c2",
-      "frozenAt": "2026-10-01T05:46:27.219Z",
+      "frozenAt": "2026-10-01T05:55:00.277Z",
       "signalId": "signal_e0b42515b7c01b58",
       "evidenceAvailableAtT0": [
         {
@@ -363,9 +363,9 @@
       "contentHash": "ffb97f2b21e99a8093be0a509c06b05d8375eff377b3ceecee72a853c09b9c41"
     },
     {
-      "freezeId": "freeze_331dfc20-9e97-478e-bcf2-86fd7476073f",
+      "freezeId": "freeze_a23146a2-fb60-4ce2-b6d6-f8dcd38c02f3",
       "hypothesisId": "hyp_81aa6b69fbeb3dd4",
-      "frozenAt": "2026-10-01T05:46:27.219Z",
+      "frozenAt": "2026-10-01T05:55:00.278Z",
       "signalId": "signal_64f6db6d23021a05",
       "evidenceAvailableAtT0": [
         {
@@ -407,11 +407,11 @@
   ],
   "validations": [
     {
-      "validationId": "validation_4f466179-4d6a-4265-9787-21b444eac887",
+      "validationId": "validation_68533759-613a-4f5a-8c5a-1fba594bf979",
       "hypothesisId": "hyp_f028e909004dd6c1",
-      "freezeId": "freeze_162b83c9-9524-4f26-b80c-85f019ed3958",
-      "startedAt": "2026-10-01T05:46:27.219Z",
-      "completedAt": "2026-10-01T05:46:27.219Z",
+      "freezeId": "freeze_d5d57906-b9c1-4f80-8755-0e5c79c0dda6",
+      "startedAt": "2026-10-01T05:55:00.277Z",
+      "completedAt": "2026-10-01T05:55:00.277Z",
       "method": "Pearson correlation on held-out rows",
       "dataset": {
         "rowCount": 20,
@@ -438,11 +438,11 @@
       }
     },
     {
-      "validationId": "validation_ac40a23b-69ff-4abc-a887-24170c07daa2",
+      "validationId": "validation_ddff9686-141d-4f24-ac0a-8c53438c82d7",
       "hypothesisId": "hyp_41b971ba1b6eb9c2",
-      "freezeId": "freeze_d1683a09-308b-444e-a89f-865db8672dd9",
-      "startedAt": "2026-10-01T05:46:27.219Z",
-      "completedAt": "2026-10-01T05:46:27.219Z",
+      "freezeId": "freeze_29c548c5-043e-409d-b69b-49438094fd50",
+      "startedAt": "2026-10-01T05:55:00.277Z",
+      "completedAt": "2026-10-01T05:55:00.277Z",
       "method": "Pearson correlation on held-out rows",
       "dataset": {
         "rowCount": 20,
@@ -469,11 +469,11 @@
       }
     },
     {
-      "validationId": "validation_013d9770-1f23-4b67-95bc-69144c48791a",
+      "validationId": "validation_1ec59a5a-f919-406e-a2a8-e10e1731a7b6",
       "hypothesisId": "hyp_81aa6b69fbeb3dd4",
-      "freezeId": "freeze_331dfc20-9e97-478e-bcf2-86fd7476073f",
-      "startedAt": "2026-10-01T05:46:27.219Z",
-      "completedAt": "2026-10-01T05:46:27.219Z",
+      "freezeId": "freeze_a23146a2-fb60-4ce2-b6d6-f8dcd38c02f3",
+      "startedAt": "2026-10-01T05:55:00.278Z",
+      "completedAt": "2026-10-01T05:55:00.278Z",
       "method": "Pearson correlation on held-out rows",
       "dataset": {
         "rowCount": 20,
@@ -502,9 +502,9 @@
   ],
   "failures": [
     {
-      "failureId": "failure_24cdc9d8-f2f2-4e88-bf5a-9b73080ec6a0",
+      "failureId": "failure_54d6529e-4c67-4e1f-84d2-66f5a740f705",
       "hypothesisId": "hyp_41b971ba1b6eb9c2",
-      "validationId": "validation_ac40a23b-69ff-4abc-a887-24170c07daa2",
+      "validationId": "validation_ddff9686-141d-4f24-ac0a-8c53438c82d7",
       "failureType": "correlation_at_most",
       "failedCriterion": {
         "type": "correlation_at_most",
@@ -523,15 +523,15 @@
       },
       "explanation": "The predefined T1 criterion was not met.",
       "reusableLesson": "Do not treat T0 association as stable without out-of-sample support.",
-      "createdAt": "2026-10-01T05:46:27.219Z"
+      "createdAt": "2026-10-01T05:55:00.277Z"
     }
   ],
   "reflections": [
     {
-      "reflectionId": "reflection_651a4b6e-479b-4425-8de2-8a3fbf4cff08",
+      "reflectionId": "reflection_bf8bab14-d426-48c5-b0ab-61f323189f52",
       "hypothesisId": "hyp_f028e909004dd6c1",
-      "outcomeId": "validation_4f466179-4d6a-4265-9787-21b444eac887",
-      "createdAt": "2026-10-01T05:46:27.219Z",
+      "outcomeId": "validation_68533759-613a-4f5a-8c5a-1fba594bf979",
+      "createdAt": "2026-10-01T05:55:00.277Z",
       "whatWasExpected": [
         "T1 correlation >= 0.75"
       ],
@@ -554,10 +554,10 @@
       ]
     },
     {
-      "reflectionId": "reflection_0dcdebc0-553f-44df-ab58-af9adc3e0735",
+      "reflectionId": "reflection_3b48bf91-ae7d-4351-b180-d84ca16bfe66",
       "hypothesisId": "hyp_41b971ba1b6eb9c2",
-      "outcomeId": "validation_ac40a23b-69ff-4abc-a887-24170c07daa2",
-      "createdAt": "2026-10-01T05:46:27.219Z",
+      "outcomeId": "validation_ddff9686-141d-4f24-ac0a-8c53438c82d7",
+      "createdAt": "2026-10-01T05:55:00.277Z",
       "whatWasExpected": [
         "T1 correlation <= -0.4"
       ],
@@ -580,10 +580,10 @@
       ]
     },
     {
-      "reflectionId": "reflection_1d3bfa74-5dbe-49b8-950a-d040a7e4b42f",
+      "reflectionId": "reflection_6cbaddd9-2450-42cb-a3c5-f327f076e17d",
       "hypothesisId": "hyp_81aa6b69fbeb3dd4",
-      "outcomeId": "validation_013d9770-1f23-4b67-95bc-69144c48791a",
-      "createdAt": "2026-10-01T05:46:27.219Z",
+      "outcomeId": "validation_1ec59a5a-f919-406e-a2a8-e10e1731a7b6",
+      "createdAt": "2026-10-01T05:55:00.278Z",
       "whatWasExpected": [
         "absolute T1 correlation < 0.15"
       ],
@@ -610,7 +610,7 @@
     {
       "type": "PRIOR_FAILURE_WARNING",
       "references": [
-        "failure_24cdc9d8-f2f2-4e88-bf5a-9b73080ec6a0"
+        "failure_54d6529e-4c67-4e1f-84d2-66f5a740f705"
       ],
       "message": "A deterministic tag/criterion match was found; this is not a semantic-equivalence claim."
     }

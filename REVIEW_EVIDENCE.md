@@ -51,13 +51,13 @@ Do not claim causal discovery, scientific validity, production readiness, autono
 
 ### G. Five-minute reading order
 
-1. `SEND_PACKAGE/demo-output/research-report.md`
-2. `SEND_PACKAGE/demo-output/research-records.json`
-3. `SEND_PACKAGE/src/core.js`
-4. `SEND_PACKAGE/src/demo.js`
-5. `SEND_PACKAGE/tests/core.test.js`
-6. `SEND_PACKAGE/ARCHITECTURE_PROVENANCE.md`
-7. `SEND_PACKAGE/docs/LIMITATIONS.md`
+1. `demo-output/research-report.md`
+2. `demo-output/research-records.json`
+3. `src/core.js`
+4. `src/demo.js`
+5. `tests/core.test.js`
+6. `ARCHITECTURE_PROVENANCE.md`
+7. `LIMITATIONS.md`
 
 ### H. Independent verification
 

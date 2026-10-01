@@ -1,0 +1,12 @@
+{
+  "datasetId": "local-temporal-observations-v1",
+  "target": "target",
+  "features": ["signal_feature", "noise_feature"],
+  "t0Split": "T0",
+  "rows": [
+    {"timestamp":"2026-01-01","split":"T0","signal_feature":1,"noise_feature":7,"target":2},
+    {"timestamp":"2026-01-02","split":"T0","signal_feature":2,"noise_feature":3,"target":4.1},
+    {"timestamp":"2026-01-03","split":"T0","signal_feature":3,"noise_feature":9,"target":5.8},
+    {"timestamp":"2026-01-04","split":"T0","signal_feature":4,"noise_feature":1,"target":8.2}
+  ]
+}

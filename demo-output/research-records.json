@@ -1,0 +1,630 @@
+{
+  "signal": {
+    "signalId": "signal_e0b42515b7c01b58",
+    "createdAt": "2026-10-01T05:09:59.718Z",
+    "datasetId": "local-temporal-observations-v1",
+    "feature": "signal_feature",
+    "target": "target",
+    "association": 0.9998388770992016,
+    "timeWindow": {
+      "start": "2026-01-01",
+      "end": "2026-01-20"
+    },
+    "metadata": {
+      "discovery": "local_pearson_scan",
+      "t0Rows": 20
+    },
+    "supportingEvidence": [
+      {
+        "type": "DATASET_ROWS",
+        "rowCount": 20,
+        "provenance": "local:local-temporal-observations-v1:T0"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "type": "LOCAL_DATASET",
+      "provenance": "datasets/local-temporal-observations.csv",
+      "description": "Rows available before the T0 freeze and held-out T1 rows."
+    }
+  ],
+  "specialistPasses": [
+    {
+      "passId": "pass_9fcd3894-7d7f-4c99-9264-ef340b0caed7",
+      "signalId": "signal_e0b42515b7c01b58",
+      "role": "DOMAIN_SPECIALIST",
+      "observation": "Association=1.000",
+      "reasoning": "A stable mechanism may connect the discovered feature to the target.",
+      "statements": [
+        {
+          "text": "A mechanism may explain the association.",
+          "status": "HYPOTHESIS",
+          "provenance": null,
+          "source": null,
+          "category": null,
+          "confidence": null
+        }
+      ],
+      "falsificationCriteria": [
+        "Held-out association does not meet the predefined threshold"
+      ],
+      "missingEvidence": [
+        "Domain intervention"
+      ],
+      "createdAt": "2026-10-01T05:09:59.720Z"
+    },
+    {
+      "passId": "pass_39b3e064-b731-4265-bc35-87baf67aae59",
+      "signalId": "signal_e0b42515b7c01b58",
+      "role": "STATISTICIAN",
+      "observation": "T0 correlation=1.000",
+      "reasoning": "Sampling, confounding, leakage, and instability must be considered.",
+      "statements": [
+        {
+          "text": "The association may be a statistical artifact.",
+          "status": "HYPOTHESIS",
+          "provenance": null,
+          "source": null,
+          "category": null,
+          "confidence": null
+        }
+      ],
+      "falsificationCriteria": [
+        "Held-out data separates from T0"
+      ],
+      "missingEvidence": [
+        "Independent replication"
+      ],
+      "createdAt": "2026-10-01T05:09:59.720Z"
+    },
+    {
+      "passId": "pass_09243ea6-a337-44bd-adb2-4fe0871faba4",
+      "signalId": "signal_64f6db6d23021a05",
+      "role": "DOMAIN_SPECIALIST",
+      "observation": "Association=0.094",
+      "reasoning": "A stable mechanism may connect the discovered feature to the target.",
+      "statements": [
+        {
+          "text": "A mechanism may explain the association.",
+          "status": "HYPOTHESIS",
+          "provenance": null,
+          "source": null,
+          "category": null,
+          "confidence": null
+        }
+      ],
+      "falsificationCriteria": [
+        "Held-out association does not meet the predefined threshold"
+      ],
+      "missingEvidence": [
+        "Domain intervention"
+      ],
+      "createdAt": "2026-10-01T05:09:59.720Z"
+    },
+    {
+      "passId": "pass_c1b29e19-aa45-45c4-80c6-4bd4435f47a6",
+      "signalId": "signal_64f6db6d23021a05",
+      "role": "STATISTICIAN",
+      "observation": "T0 correlation=0.094",
+      "reasoning": "Sampling, confounding, leakage, and instability must be considered.",
+      "statements": [
+        {
+          "text": "The association may be a statistical artifact.",
+          "status": "HYPOTHESIS",
+          "provenance": null,
+          "source": null,
+          "category": null,
+          "confidence": null
+        }
+      ],
+      "falsificationCriteria": [
+        "Held-out data separates from T0"
+      ],
+      "missingEvidence": [
+        "Independent replication"
+      ],
+      "createdAt": "2026-10-01T05:09:59.720Z"
+    }
+  ],
+  "hypotheses": [
+    {
+      "hypothesisId": "hyp_f028e909004dd6c1",
+      "signalId": "signal_e0b42515b7c01b58",
+      "feature": "signal_feature",
+      "label": "H1 causal/domain mechanism",
+      "mechanism": "signal_feature remains positively associated with target in held-out T1 rows.",
+      "supportingStatements": [
+        {
+          "text": "T0 contains a positive feature-target association.",
+          "status": "FACT",
+          "provenance": [
+            "local-temporal-observations-v1:T0:rows"
+          ],
+          "source": null,
+          "category": null,
+          "confidence": null
+        }
+      ],
+      "counterEvidence": [
+        {
+          "type": "COUNTER_EVIDENCE",
+          "text": "T0 association alone does not establish causality."
+        }
+      ],
+      "missingEvidence": [
+        {
+          "type": "MISSING_EVIDENCE",
+          "text": "Independent replication or intervention."
+        }
+      ],
+      "falsificationCriteria": [
+        {
+          "type": "correlation_at_least",
+          "threshold": 0.75
+        }
+      ],
+      "expectedObservations": [
+        "T1 correlation >= 0.75"
+      ],
+      "tags": {
+        "featureFamily": "signal",
+        "mechanismFamily": "stable-association",
+        "datasetDomain": "local-temporal"
+      },
+      "confidenceAtT0": 0.55,
+      "createdAt": "2026-10-01T05:09:59.720Z"
+    },
+    {
+      "hypothesisId": "hyp_41b971ba1b6eb9c2",
+      "signalId": "signal_e0b42515b7c01b58",
+      "feature": "signal_feature",
+      "label": "H2 inverse alternative",
+      "mechanism": "The observed relation is actually negative out of sample.",
+      "supportingStatements": [
+        {
+          "text": "An inverse explanation remains logically possible.",
+          "status": "HYPOTHESIS",
+          "provenance": null,
+          "source": null,
+          "category": null,
+          "confidence": null
+        }
+      ],
+      "counterEvidence": [
+        {
+          "type": "COUNTER_EVIDENCE",
+          "text": "T0 correlation is positive, which weighs against an inverse explanation."
+        }
+      ],
+      "missingEvidence": [
+        {
+          "type": "MISSING_EVIDENCE",
+          "text": "A preregistered independent replication."
+        }
+      ],
+      "falsificationCriteria": [
+        {
+          "type": "correlation_at_most",
+          "threshold": -0.4
+        }
+      ],
+      "expectedObservations": [
+        "T1 correlation <= -0.4"
+      ],
+      "tags": {
+        "featureFamily": "signal",
+        "mechanismFamily": "alternative",
+        "datasetDomain": "local-temporal"
+      },
+      "confidenceAtT0": 0.2,
+      "createdAt": "2026-10-01T05:09:59.720Z"
+    },
+    {
+      "hypothesisId": "hyp_81aa6b69fbeb3dd4",
+      "signalId": "signal_64f6db6d23021a05",
+      "feature": "noise_feature",
+      "label": "H3 unstable/noise artifact",
+      "mechanism": "The noise feature association disappears to near-zero in T1.",
+      "supportingStatements": [
+        {
+          "text": "A finite-sample artifact is possible.",
+          "status": "HYPOTHESIS",
+          "provenance": null,
+          "source": null,
+          "category": null,
+          "confidence": null
+        }
+      ],
+      "counterEvidence": [
+        {
+          "type": "COUNTER_EVIDENCE",
+          "text": "The T0 noise correlation is not itself proof of instability."
+        }
+      ],
+      "missingEvidence": [
+        {
+          "type": "MISSING_EVIDENCE",
+          "text": "A second held-out dataset."
+        }
+      ],
+      "falsificationCriteria": [
+        {
+          "type": "absolute_correlation_below",
+          "threshold": 0.15
+        }
+      ],
+      "expectedObservations": [
+        "absolute T1 correlation < 0.15"
+      ],
+      "tags": {
+        "featureFamily": "noise",
+        "mechanismFamily": "sampling-artifact",
+        "datasetDomain": "local-temporal"
+      },
+      "confidenceAtT0": 0.25,
+      "createdAt": "2026-10-01T05:09:59.720Z"
+    }
+  ],
+  "freezes": [
+    {
+      "freezeId": "freeze_a8815a0b-2fa2-4385-91c6-f5b7f974d95a",
+      "hypothesisId": "hyp_f028e909004dd6c1",
+      "frozenAt": "2026-10-01T05:09:59.721Z",
+      "signalId": "signal_e0b42515b7c01b58",
+      "evidenceAvailableAtT0": [
+        {
+          "type": "LOCAL_DATASET",
+          "provenance": "datasets/local-temporal-observations.csv",
+          "description": "Rows available before the T0 freeze and held-out T1 rows."
+        }
+      ],
+      "factsAtT0": [
+        {
+          "text": "T0 contains a positive feature-target association.",
+          "status": "FACT",
+          "provenance": [
+            "local-temporal-observations-v1:T0:rows"
+          ],
+          "source": null,
+          "category": null,
+          "confidence": null
+        }
+      ],
+      "inferencesAtT0": [],
+      "hypothesisAtT0": {
+        "label": "H1 causal/domain mechanism",
+        "mechanism": "signal_feature remains positively associated with target in held-out T1 rows."
+      },
+      "counterEvidenceAtT0": [
+        {
+          "type": "COUNTER_EVIDENCE",
+          "text": "T0 association alone does not establish causality."
+        }
+      ],
+      "missingEvidenceAtT0": [
+        {
+          "type": "MISSING_EVIDENCE",
+          "text": "Independent replication or intervention."
+        }
+      ],
+      "confidenceAtT0": 0.55,
+      "falsificationCriteria": [
+        {
+          "type": "correlation_at_least",
+          "threshold": 0.75
+        }
+      ],
+      "expectedObservations": [
+        "T1 correlation >= 0.75"
+      ],
+      "contentHash": "9008327daec511f9bc503b0bce046d663bd39bdcaf24c552895d1a0c0e58f78a"
+    },
+    {
+      "freezeId": "freeze_6a0ea833-e23b-4588-a312-e5236a59753a",
+      "hypothesisId": "hyp_41b971ba1b6eb9c2",
+      "frozenAt": "2026-10-01T05:09:59.722Z",
+      "signalId": "signal_e0b42515b7c01b58",
+      "evidenceAvailableAtT0": [
+        {
+          "type": "LOCAL_DATASET",
+          "provenance": "datasets/local-temporal-observations.csv",
+          "description": "Rows available before the T0 freeze and held-out T1 rows."
+        }
+      ],
+      "factsAtT0": [],
+      "inferencesAtT0": [],
+      "hypothesisAtT0": {
+        "label": "H2 inverse alternative",
+        "mechanism": "The observed relation is actually negative out of sample."
+      },
+      "counterEvidenceAtT0": [
+        {
+          "type": "COUNTER_EVIDENCE",
+          "text": "T0 correlation is positive, which weighs against an inverse explanation."
+        }
+      ],
+      "missingEvidenceAtT0": [
+        {
+          "type": "MISSING_EVIDENCE",
+          "text": "A preregistered independent replication."
+        }
+      ],
+      "confidenceAtT0": 0.2,
+      "falsificationCriteria": [
+        {
+          "type": "correlation_at_most",
+          "threshold": -0.4
+        }
+      ],
+      "expectedObservations": [
+        "T1 correlation <= -0.4"
+      ],
+      "contentHash": "ffb97f2b21e99a8093be0a509c06b05d8375eff377b3ceecee72a853c09b9c41"
+    },
+    {
+      "freezeId": "freeze_b21827c2-78a5-490c-9db5-3f8350716071",
+      "hypothesisId": "hyp_81aa6b69fbeb3dd4",
+      "frozenAt": "2026-10-01T05:09:59.722Z",
+      "signalId": "signal_64f6db6d23021a05",
+      "evidenceAvailableAtT0": [
+        {
+          "type": "LOCAL_DATASET",
+          "provenance": "datasets/local-temporal-observations.csv",
+          "description": "Rows available before the T0 freeze and held-out T1 rows."
+        }
+      ],
+      "factsAtT0": [],
+      "inferencesAtT0": [],
+      "hypothesisAtT0": {
+        "label": "H3 unstable/noise artifact",
+        "mechanism": "The noise feature association disappears to near-zero in T1."
+      },
+      "counterEvidenceAtT0": [
+        {
+          "type": "COUNTER_EVIDENCE",
+          "text": "The T0 noise correlation is not itself proof of instability."
+        }
+      ],
+      "missingEvidenceAtT0": [
+        {
+          "type": "MISSING_EVIDENCE",
+          "text": "A second held-out dataset."
+        }
+      ],
+      "confidenceAtT0": 0.25,
+      "falsificationCriteria": [
+        {
+          "type": "absolute_correlation_below",
+          "threshold": 0.15
+        }
+      ],
+      "expectedObservations": [
+        "absolute T1 correlation < 0.15"
+      ],
+      "contentHash": "eaa96b421c4a5b28c15937b61569ece4d056504730508e8657003d155a427bde"
+    }
+  ],
+  "validations": [
+    {
+      "validationId": "validation_35e29b5f-f3b8-4cf5-b7a2-4ecf58004e23",
+      "hypothesisId": "hyp_f028e909004dd6c1",
+      "freezeId": "freeze_a8815a0b-2fa2-4385-91c6-f5b7f974d95a",
+      "startedAt": "2026-10-01T05:09:59.721Z",
+      "completedAt": "2026-10-01T05:09:59.721Z",
+      "method": "Pearson correlation on held-out rows",
+      "dataset": {
+        "rowCount": 20,
+        "datasetId": "signal_e0b42515b7c01b58"
+      },
+      "temporalBoundary": {
+        "train": "T0",
+        "validation": "T1",
+        "resultUnavailableAtT0": true
+      },
+      "observations": {
+        "correlation": 0.9996851605515977,
+        "rowCount": 20,
+        "feature": "signal_feature",
+        "target": "target"
+      },
+      "metrics": {
+        "correlation": 0.9996851605515977
+      },
+      "status": "SURVIVED",
+      "predefinedCriterion": {
+        "type": "correlation_at_least",
+        "threshold": 0.75
+      }
+    },
+    {
+      "validationId": "validation_bc3e2f37-9047-49d0-a909-ba04c194d053",
+      "hypothesisId": "hyp_41b971ba1b6eb9c2",
+      "freezeId": "freeze_6a0ea833-e23b-4588-a312-e5236a59753a",
+      "startedAt": "2026-10-01T05:09:59.722Z",
+      "completedAt": "2026-10-01T05:09:59.722Z",
+      "method": "Pearson correlation on held-out rows",
+      "dataset": {
+        "rowCount": 20,
+        "datasetId": "signal_e0b42515b7c01b58"
+      },
+      "temporalBoundary": {
+        "train": "T0",
+        "validation": "T1",
+        "resultUnavailableAtT0": true
+      },
+      "observations": {
+        "correlation": 0.9996851605515977,
+        "rowCount": 20,
+        "feature": "signal_feature",
+        "target": "target"
+      },
+      "metrics": {
+        "correlation": 0.9996851605515977
+      },
+      "status": "FAILED",
+      "predefinedCriterion": {
+        "type": "correlation_at_most",
+        "threshold": -0.4
+      }
+    },
+    {
+      "validationId": "validation_c51f7300-7f5f-422e-897d-3664aa057125",
+      "hypothesisId": "hyp_81aa6b69fbeb3dd4",
+      "freezeId": "freeze_b21827c2-78a5-490c-9db5-3f8350716071",
+      "startedAt": "2026-10-01T05:09:59.722Z",
+      "completedAt": "2026-10-01T05:09:59.722Z",
+      "method": "Pearson correlation on held-out rows",
+      "dataset": {
+        "rowCount": 20,
+        "datasetId": "signal_64f6db6d23021a05"
+      },
+      "temporalBoundary": {
+        "train": "T0",
+        "validation": "T1",
+        "resultUnavailableAtT0": true
+      },
+      "observations": {
+        "correlation": -0.011619672307732332,
+        "rowCount": 20,
+        "feature": "noise_feature",
+        "target": "target"
+      },
+      "metrics": {
+        "correlation": -0.011619672307732332
+      },
+      "status": "SURVIVED",
+      "predefinedCriterion": {
+        "type": "absolute_correlation_below",
+        "threshold": 0.15
+      }
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "failure_00e3d4e9-3557-488c-90f6-980773aa95d8",
+      "hypothesisId": "hyp_41b971ba1b6eb9c2",
+      "validationId": "validation_bc3e2f37-9047-49d0-a909-ba04c194d053",
+      "failureType": "correlation_at_most",
+      "failedCriterion": {
+        "type": "correlation_at_most",
+        "threshold": -0.4
+      },
+      "tags": {
+        "featureFamily": "signal",
+        "mechanismFamily": "alternative",
+        "datasetDomain": "local-temporal"
+      },
+      "evidence": {
+        "correlation": 0.9996851605515977,
+        "rowCount": 20,
+        "feature": "signal_feature",
+        "target": "target"
+      },
+      "explanation": "The predefined T1 criterion was not met.",
+      "reusableLesson": "Do not treat T0 association as stable without out-of-sample support.",
+      "createdAt": "2026-10-01T05:09:59.722Z"
+    }
+  ],
+  "reflections": [
+    {
+      "reflectionId": "reflection_acfcfd4f-f6c1-4955-9225-1f8fa36923cb",
+      "hypothesisId": "hyp_f028e909004dd6c1",
+      "outcomeId": "validation_35e29b5f-f3b8-4cf5-b7a2-4ecf58004e23",
+      "createdAt": "2026-10-01T05:09:59.722Z",
+      "whatWasExpected": [
+        "T1 correlation >= 0.75"
+      ],
+      "whatOccurred": {
+        "correlation": 0.9996851605515977,
+        "rowCount": 20,
+        "feature": "signal_feature",
+        "target": "target"
+      },
+      "whatWasWrong": null,
+      "whatWasMissing": [
+        {
+          "type": "MISSING_EVIDENCE",
+          "text": "Independent replication or intervention."
+        }
+      ],
+      "whatWasLearned": "Lifecycle=SURVIVED; confidence was not used as truth authority.",
+      "proposedNextExperiments": [
+        "Repeat on an independent temporal slice"
+      ]
+    },
+    {
+      "reflectionId": "reflection_4d2a9c05-948b-409d-86c5-0abc89dd2c47",
+      "hypothesisId": "hyp_41b971ba1b6eb9c2",
+      "outcomeId": "validation_bc3e2f37-9047-49d0-a909-ba04c194d053",
+      "createdAt": "2026-10-01T05:09:59.722Z",
+      "whatWasExpected": [
+        "T1 correlation <= -0.4"
+      ],
+      "whatOccurred": {
+        "correlation": 0.9996851605515977,
+        "rowCount": 20,
+        "feature": "signal_feature",
+        "target": "target"
+      },
+      "whatWasWrong": "The predefined criterion failed.",
+      "whatWasMissing": [
+        {
+          "type": "MISSING_EVIDENCE",
+          "text": "A preregistered independent replication."
+        }
+      ],
+      "whatWasLearned": "Lifecycle=FAILED; confidence was not used as truth authority.",
+      "proposedNextExperiments": [
+        "Repeat on an independent temporal slice"
+      ]
+    },
+    {
+      "reflectionId": "reflection_4a9a7260-e08a-4c14-8c30-7027aa0f7797",
+      "hypothesisId": "hyp_81aa6b69fbeb3dd4",
+      "outcomeId": "validation_c51f7300-7f5f-422e-897d-3664aa057125",
+      "createdAt": "2026-10-01T05:09:59.722Z",
+      "whatWasExpected": [
+        "absolute T1 correlation < 0.15"
+      ],
+      "whatOccurred": {
+        "correlation": -0.011619672307732332,
+        "rowCount": 20,
+        "feature": "noise_feature",
+        "target": "target"
+      },
+      "whatWasWrong": null,
+      "whatWasMissing": [
+        {
+          "type": "MISSING_EVIDENCE",
+          "text": "A second held-out dataset."
+        }
+      ],
+      "whatWasLearned": "Lifecycle=SURVIVED; confidence was not used as truth authority.",
+      "proposedNextExperiments": [
+        "Repeat on an independent temporal slice"
+      ]
+    }
+  ],
+  "priorFailureWarnings": [
+    {
+      "type": "PRIOR_FAILURE_WARNING",
+      "references": [
+        "failure_00e3d4e9-3557-488c-90f6-980773aa95d8"
+      ],
+      "message": "A deterministic tag/criterion match was found; this is not a semantic-equivalence claim."
+    }
+  ],
+  "governanceChecks": {
+    "t0Rows": 20,
+    "t1Rows": 20,
+    "resultUnavailableAtT0": true,
+    "allFalsificationCriteriaFrozenBeforeValidation": true,
+    "illegalMutationRejected": true,
+    "reflectionCannotRewriteT0": true,
+    "unsupportedFactRejected": true,
+    "freezeHashReproducible": true,
+    "failedHypothesisStillStored": true
+  },
+  "illegalMutationRejected": true
+}
